@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gold Purity Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Header -->
+    <header class="header">
+        <a href="https://shrisaiscales3.wordpress.com/" target="_blank">
+    <img src="C:\Secondary Disk D\Project\Gold Purity Calculator\images\dark-logo.png" alt="Company Logo" class="logo dark-logo">
+    <img src="C:\Secondary Disk D\Project\Gold Purity Calculator\images\light-logo.png" alt="Company Logo" class="logo light-logo">
+</a>
+
+        <!-- Dark Mode Toggle -->
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </header>
+
+    <!-- Card -->
+    <div class="card fade-in">
+        <h2>Gold Purity Calculator</h2>
+
+        <div class="input-group">
+            <label>Liquid Type</label>
+            <select id="liquidType">
+                <option value="diesel">Diesel</option>
+                <option value="alcohol">Isopropyl Alcohol</option>
+                <option value="kerosene">Kerosene Oil</option>
+                <option value="water">Water</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Weight in Air (g)</label>
+            <input type="number" id="weightAir" placeholder="Enter weight in air">
+        </div>
+
+        <div class="input-group">
+            <label>Weight in Liquid (g)</label>
+            <input type="number" id="weightLiquid" placeholder="Enter weight in liquid">
+        </div>
+
+        <div class="btn-group">
+            <button onclick="resetFields()" class="btn secondary">Reset</button>
+            <button onclick="calculatePurity()" class="btn primary">Calculate</button>
+        </div>
+
+        <div id="result" class="result"></div>
+
+        <!-- Accuracy Parameters -->
+        <div class="note">
+            <strong>Accuracy Parameters:</strong>
+            <ul>
+                <li>Gold density used: 19.32 g/cm³ (at ~20°C)</li>
+                <li>Scale is tared, bubble-free and the item is fully submerged.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>Reach us at:</strong></p>
+        <p><a href="https://shrisaiscales3.wordpress.com/">shrisaiscales</a> | 
+           <a href="tel:+919212131580">+91 9212131580</a>
+        </p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
